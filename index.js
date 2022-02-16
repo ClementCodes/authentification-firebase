@@ -1,5 +1,5 @@
 /** @format */
-
+//systeme d'inscription firebase version 9
 const btnInscription = document.querySelector(".btn-inscription");
 const btnConnection = document.querySelector(".btn-connection");
 const deco = document.querySelector(".btn-deco");
@@ -73,10 +73,11 @@ const info = document.querySelector(".info");
 auth.onAuthStateChanged((utilisateur) => {
   if (utilisateur) {
     info.innerText = "Voici le contenu privé";
-    h1.innerText = "Vous voila de retour  (:!:)";
+    h1.innerText = "Vous voila de retour, vous êtes bien connécté  (:!:)";
   } else {
     console.log("utilisateur s'est déconnécté");
     info.innerText = "Contenu public";
-    h1.innerText = "Bienvenue , inscrivez-vous ou conectez vous !!!";
+    h1.innerText =
+      "Bienvenue , inscrivez-vous ou conectez vous faites comme chez vous !!!";
   }
 });
